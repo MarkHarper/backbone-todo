@@ -20,6 +20,33 @@
             <footer id = "footer"></footer>
         </section>
         
+        <script type="text/template" id="item-template">
+            <div class="view">
+                <input type="checkbox" class="toggle" <% completed ? 'checked' : '' %>>
+                <label><% title %></label>
+                <button class = 'destroy'></button>
+            </div>
+            <input type="text" class="edit" value="<% title %>">
+        </script>
+        
+        <script type="text/template" id="stats-template">
+            <span id="todo-count"><strong><% remaining %></strong> <% remaining === 1 ? 'item' : 'items'</span>
+            <ul id = "filters">
+                <li>
+                    <a class = "selected" href="#/">All</a>
+                </li>
+                <li>
+                    <a href="#/active">Active</a>
+                </li>
+                <li>
+                    <a href="#/completed">Completed</a>
+                </li>
+            </ul>
+            <% if (completed) { %>
+            <button id = "clear-completed">Clear completed (<%= completed %>)</button>
+            <% } %>
+        </script>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.2/backbone-min.js"></script>
