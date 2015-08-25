@@ -7,7 +7,19 @@
     </head>
     <body>
 
-
+        <section id = "todo-app">
+            <header id = "header">
+                <h1>Todos</h1>
+                <input type="text" id="new" placeholder="GTD" autofocus>
+            </header>
+            <main id = "main">
+                <input type="checkbox" id="toggle-all">
+                <label for="toggle-all">Mark as completed</label>
+                <ul id = "todo-list"></ul>
+            </main>
+            <footer id = "footer"></footer>
+        </section>
+        
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/backbone.js/1.2.2/backbone-min.js"></script>
